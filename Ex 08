@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double salarioBruto, valorPrestacao;
+    
+    cout << "Digite o salário bruto do funcionário: ";
+    cin >> salarioBruto;
+    
+    cout << "Digite o valor da prestação do empréstimo: ";
+    cin >> valorPrestacao;
+    
+    double limitePrestacao = salarioBruto * 0.30;
+    
+    if (valorPrestacao <= limitePrestacao) {
+        cout << "Empréstimo pode ser concedido." << endl;
+    } else {
+        cout << "Empréstimo não pode ser concedido, pois o valor da prestação ultrapassa 30% do salário." << endl;
+    }
+
+    return 0;
+}
