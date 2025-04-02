@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, soma;
+    
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+    
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+    
+    soma = num1 + num2;
+    
+    if (soma > 10) {
+        cout << "O resultado da soma é: " << soma << endl;
+    } else {
+        cout << "A soma não é maior que 10." << endl;
+    }
+
+    return 0;
+}
