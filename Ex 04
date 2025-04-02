@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>  
+using namespace std;
+
+int main() {
+    double numero;
+    
+    cout << "Digite um número: ";
+    cin >> numero;
+    
+    if (numero >= 0) {
+       
+        cout << "A raiz quadrada de " << numero << " é: " << sqrt(numero) << endl;
+    } else {
+        
+        cout << "O quadrado de " << numero << " é: " << (numero * numero) << endl;
+    }
+
+    return 0;
+}
