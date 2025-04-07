@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero;
+
+    cout << "Digite um número: ";
+    cin >> numero;
+
+    if (numero >= 20 && numero <= 90) {
+        cout << "O número está entre 20 e 90." << endl;
+    } else {
+        cout << "O número NÃO está entre 20 e 90." << endl;
+    }
+
+    return 0;
+}
