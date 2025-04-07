@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string estado;
+
+    cout << "Digite a sigla do seu estado (ex: RJ, SP, MG): ";
+    cin >> estado;
+
+    for (char &c : estado) {
+        c = toupper(c);
+    }
+
+    if (estado == "RJ") {
+        cout << "Você é carioca." << endl;
+    } else if (estado == "SP") {
+        cout << "Você é paulista." << endl;
+    } else if (estado == "MG") {
+        cout << "Você é mineiro." << endl;
+    } else {
+        cout << "Você é de outro estado." << endl;
+    }
+
+    return 0;
+}
