@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3, maior, meio, menor;
+
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+
+    cout << "Digite o terceiro número: ";
+    cin >> num3;
+
+    if (num1 > num2 && num1 > num3) {
+        maior = num1;
+        if (num2 > num3) {
+            meio = num2;
+            menor = num3;
+        } else {
+            meio = num3;
+            menor = num2;
+        }
+    } else if (num2 > num1 && num2 > num3) {
+        maior = num2;
+        if (num1 > num3) {
+            meio = num1;
+            menor = num3;
+        } else {
+            meio = num3;
+            menor = num1;
+        }
+    } else {
+        maior = num3;
+        if (num1 > num2) {
+            meio = num1;
+            menor = num2;
+        } else {
+            meio = num2;
+            menor = num1;
+        }
+    }
+
+    cout << "Os números em ordem decrescente: " << maior << ", " << meio << ", " << menor << endl;
+
+    return 0;
+}
