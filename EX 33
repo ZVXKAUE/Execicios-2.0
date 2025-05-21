@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string municipio;
+    int eleitoresAptos, votosCandidato;
+
+cout << "Digite o nome do municipio: ";
+    getline(cin, municipio);
+    
+    cout << "Digite a quantidade de eleitores aptos: ";
+    cin >> eleitoresAptos;
+    
+    cout << "Digite o número de votos do candidato mais votado: ";
+    cin >> votosCandidato;
+
+    if (eleitoresAptos > 20000) {
+        double percentualVotos = (votosCandidato / static_cast<double>(eleitoresAptos)) * 100;
+
+        if (percentualVotos > 50) {
+            cout << "O municipio de " << municipio << " NÃO terá segundo turno." << endl;
+        } else {
+            cout << "O municipio de " << municipio << " terá segundo turno." << endl;
+        }
+    } else {
+        cout << "O municipio de " << municipio << " NÃO terá segundo turno, pois possui menos de 20.000 eleitores aptos." << endl;
+    }
+
+    return 0;
+}
