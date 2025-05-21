@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>  // Para usar a função pow, caso necessário
+using namespace std;
+
+int main() {
+    double x, fx;
+
+    cout << "Digite o valor de x: ";
+    cin >> x;
+
+    if (x <= 3) {
+        fx = x;  // f(x) = x quando x <= 3
+    } else if (x > 3 && x <= 5) {
+        fx = pow(x, 2);  // f(x) = x^2 quando 3 < x <= 5
+    } else {
+        fx = pow(x, 3);  // f(x) = x^3 quando x > 5
+    }
+
+    cout << "O valor de f(x) para x = " << x << " é: " << fx << endl;
+
+    return 0;
+}
