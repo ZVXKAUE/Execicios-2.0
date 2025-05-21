@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double valorCompra, valorVenda;
+
+    cout << "Digite o valor de compra do produto: R$ ";
+    cin >> valorCompra;
+
+    if (valorCompra < 20.00) {
+        valorVenda = valorCompra * 1.45; // Lucro de 45%
+    } else {
+        valorVenda = valorCompra * 1.30; // Lucro de 30%
+    }
+
+    cout << "O valor de venda do produto será: R$ " << valorVenda << endl;
+
+    return 0;
+}
