@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double lados[3];
+
+    cout << "Digite os três lados do triângulo:\n";
+    cin >> lados[0] >> lados[1] >> lados[2];
+
+    sort(lados, lados + 3);
+
+    double a = lados[0];
+    double b = lados[1];
+    double c = lados[2];
+
+    if (a + b > c) {
+        double a2b2 = pow(a, 2) + pow(b, 2);
+        double c2 = pow(c, 2);
+
+        cout << "Os lados formam um triângulo ";
+
+        if (fabs(c2 - a2b2) < 1e-6) {
+            cout << "retângulo." << endl;
+        } else if (c2 > a2b2) {
+            cout << "obtusângulo." << endl;
+        } else {
+            cout << "acutângulo." << endl;
+        }
+    } else {
+        cout << "Os lados NAO formam um triângulo." << endl;
+    }
+
+    return 0;
+}
