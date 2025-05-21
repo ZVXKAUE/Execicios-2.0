@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b, c;
+
+    cout << "Digite o primeiro lado: ";
+    cin >> a;
+    cout << "Digite o segundo lado: ";
+    cin >> b;
+    cout << "Digite o terceiro lado: ";
+    cin >> c;
+
+    if (a + b > c && a + c > b && b + c > a) {
+        cout << "Os valores podem formar um triângulo." << endl;
+    } else {
+        cout << "Os valores NAO podem formar um triângulo." << endl;
+    }
+
+    return 0;
+}
