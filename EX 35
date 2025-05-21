@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>  // Para funções matemáticas como pow (potência)
+using namespace std;
+
+int main() {
+    double x, fx;
+
+    cout << "Digite o valor de x: ";
+    cin >> x;
+
+    if (x == 0) {
+        cout << "Erro: divisão por zero não permitida." << endl;
+    } else {
+        fx = 8 / pow(x, 2);  // pow(x, 2) calcula x^2
+        cout << "O valor de f(x) para x = " << x << " é: " << fx << endl;
+    }
+
+    return 0;
+}
