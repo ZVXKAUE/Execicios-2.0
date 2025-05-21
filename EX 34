@@ -1,0 +1,33 @@
+#include <iostream>
+#include <algorithm>  // Para a função sort
+using namespace std;
+
+int main() {
+    int pontos[3];
+    int soma = 0;
+    double media;
+
+    cout << "Digite os pontos do primeiro jogador: ";
+    cin >> pontos[0];
+
+    cout << "Digite os pontos do segundo jogador: ";
+    cin >> pontos[1];
+
+    cout << "Digite os pontos do terceiro jogador: ";
+    cin >> pontos[2];
+
+    sort(pontos, pontos + 3, greater<int>());
+
+    cout << "Pontos em ordem decrescente: " << pontos[0] << ", " << pontos[1] << ", " << pontos[2] << endl;
+    soma = pontos[0] + pontos[1] + pontos[2];
+
+    
+    if (soma > 100) {
+        // Calculando a média aritmética
+        media = soma / 3.0;
+        cout << "A média da equipe é: " << media << endl;
+    } else {
+        cout << "Equipe desclassificada" << endl;
+    }
+
+    return 0;
