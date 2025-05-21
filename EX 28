@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double salario, desconto;
+
+    cout << "Digite o salário da pessoa: R$ ";
+    cin >> salario;
+
+    if (salario <= 600.00) {
+        cout << "Desconto do INSS: Isento" << endl;
+    } else if (salario > 600.00 && salario <= 1200.00) {
+        desconto = salario * 0.20;
+        cout << "Desconto do INSS: R$ " << desconto << " (20%)" << endl;
+    } else if (salario > 1200.00 && salario <= 2000.00) {
+        desconto = salario * 0.25;
+        cout << "Desconto do INSS: R$ " << desconto << " (25%)" << endl;
+    } else {
+        desconto = salario * 0.30;
+        cout << "Desconto do INSS: R$ " << desconto << " (30%)" << endl;
+    }
+
+    return 0;
+}
